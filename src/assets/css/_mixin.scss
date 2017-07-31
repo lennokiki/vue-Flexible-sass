@@ -1,0 +1,58 @@
+@mixin font-dpr($font-size){ 
+	font-size: $font-size; 
+	[data-dpr="2"] & { 
+		font-size: $font-size * 2; 
+	}
+	[data-dpr="3"] & {
+		font-size: $font-size * 3; 
+	} 
+}
+@mixin px2rem($property,$px-values,$baseline-px:75px,$support-for-ie:false){ 
+	//Conver the baseline into rems 
+	$baseline-rem: $baseline-px / 1rem * 1; 
+	//Print the first line in pixel values 
+	@if $support-for-ie { 
+		#{$property}: $px-values; 
+	} 
+	//if there is only one (numeric) value, return the property/value line for it. 
+	@if type-of($px-values) == "number"{ 
+		#{$property}: $px-values / $baseline-rem; 
+	} @else {
+		//Create an empty list that we can dump values into 
+		$rem-values:(); 
+		@each $value in $px-values{ 
+		// If the value is zero or not a number, return it 
+			@if $value == 0 or type-of($value) == "number"{ 
+				$rem-values: append($rem-values, $value / $baseline-rem); 
+			} 
+		} 
+		// Return the property and its list of converted values 
+		#{$property}: $rem-values; 
+	} 
+}
+@mixin initFlex(){
+	display: -webkit-box;
+	display: flex;
+	display: -webkit-flex;
+}
+
+@mixin heightCenter(){
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+@mixin widthCenter(){
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+@mixin columns(){
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-webkit-box-orient: vertical;
+}
+
+@mixin flexOne(){
+	flex: 1;
+	-webkit-flex: 1;
+}

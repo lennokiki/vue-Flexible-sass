@@ -1,0 +1,10 @@
+@import "./_mixin.scss";
+header {
+	@include initFlex();
+	@include widthCenter();
+	@include heightCenter();
+	@include px2rem(height, 88px);
+	background: #fff;
+	color: red;
+	@include font-dpr(16px);
+}
