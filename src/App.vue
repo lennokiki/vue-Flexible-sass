@@ -46,19 +46,17 @@ export default {
     background: #fff;
     width: 100%;
     display: flex;
-    display: -webkit-flex;
     align-items: center;
-    -webkit-align-items: center;
     @include px2rem(height, 100px)
     position: fixed;
     left: 0;
     bottom: 0;
     div {
-      @include flexOne;
-      @include initFlex;
-      @include columns;
-      @include heightCenter;
-      @include widthCenter;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 100%;
       color: #555;
       i {

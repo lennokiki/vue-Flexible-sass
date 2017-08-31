@@ -30,22 +30,3 @@
 		#{$property}: $rem-values; 
 	} 
 }
-@mixin initFlex(){
-	display: flex;
-}
-
-@mixin heightCenter(){
-	align-items: center;
-}
-
-@mixin widthCenter(){
-	justify-content: center;
-}
-
-@mixin columns(){
-	flex-direction: column;
-}
-
-@mixin flexOne(){
-	flex: 1;
-}
