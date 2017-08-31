@@ -31,28 +31,21 @@
 	} 
 }
 @mixin initFlex(){
-	display: -webkit-box;
 	display: flex;
-	display: -webkit-flex;
 }
 
 @mixin heightCenter(){
 	align-items: center;
-	-webkit-align-items: center;
 }
 
 @mixin widthCenter(){
 	justify-content: center;
-	-webkit-justify-content: center;
 }
 
 @mixin columns(){
 	flex-direction: column;
-	-webkit-flex-direction: column;
-	-webkit-box-orient: vertical;
 }
 
 @mixin flexOne(){
 	flex: 1;
-	-webkit-flex: 1;
 }
