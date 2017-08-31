@@ -1,6 +1,6 @@
 # mobile-model
 
-> A Vue.js project
+This demo use taobao's flexiable layout style, and sass mixin to convert px to rem, it's very convenient and userful.
 
 ## Build Setup
 
