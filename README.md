@@ -7,7 +7,7 @@ Notice: this demo use node-sass , better use "cnpm" to install the resource
 
 ``` bash
 # install dependencies
-npm install
+cnpm install
 
 # serve with hot reload at localhost:8080
 npm run dev
